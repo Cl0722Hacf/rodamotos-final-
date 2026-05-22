@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roda Motos - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav id="navbar">
+        <div class="nav-logo">
+            <span class="logo-icon">🏍️</span>
+            <h2>Roda Motos</h2>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="RODAMOTOS.html" class="activo">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO / ENCABEZADO PRINCIPAL -->
+    <header class="hero">
+        <div class="hero-contenido">
+            <h1 class="animar-entrada">Refacciones y accesorios para motocicletas</h1>
+            <p class="animar-entrada delay-1">Calidad, precio justo y atención profesional</p>
+            <div class="hero-botones animar-entrada delay-2">
+                <a href="productos.html" class="btn-primario">Ver productos</a>
+                <a href="contacto.html" class="btn-secundario">Contáctanos</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <!-- ESTADÍSTICAS RÁPIDAS -->
+    <section class="estadisticas">
+        <div class="stat-item">
+            <span class="stat-numero">500</span><span>+</span>
+            <p>Refacciones disponibles</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-numero">10</span><span>+</span>
+            <p>Marcas que cubrimos</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-numero">8</span><span>+</span>
+            <p>Años de experiencia</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-numero">1,200</span><span>+</span>
+            <p>Clientes satisfechos</p>
+        </div>
+    </section>
+
+    <main>
+
+<!-- PRODUCTOS DESTACADOS -->
+        <section class="tarjeta animar-scroll">
+            <h2>Productos destacados</h2>
+            <div class="productos" id="productosDestacados">
+
+                <div class="producto">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/filtro de aire.png"
+                             alt="Filtro de aire para motocicleta de alto flujo">
+                        <span class="etiqueta-producto">Popular</span>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Filtro de aire</h3>
+                        <p>Mejora el rendimiento y protege el motor de tu moto.</p>
+                        <a href="detalle.html?producto=filtro-aire" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/bujía.png"
+                             alt="Bujía de iridio para motocicleta">
+                        <span class="etiqueta-producto">Top venta</span>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Bujía</h3>
+                        <p>Encendido seguro y larga duración para tu motocicleta.</p>
+                        <a href="detalle.html?producto=bujia" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/cadena y piñon.png"
+                             alt="Kit de cadena y piñón para motocicleta">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Cadena y piñón</h3>
+                        <p>Kits completos de mantenimiento para tu moto.</p>
+                        <a href="detalle.html?producto=cadena-pinon" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/aceite de motor.png"
+                             alt="Aceite de motor sintético para motocicleta">
+                        <span class="etiqueta-producto">Nuevo</span>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Aceite de motor</h3>
+                        <p>Lubricación óptima para mayor vida útil de tu moto.</p>
+                        <a href="detalle.html?producto=aceite-motor" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="texto-centrado" style="margin-top: 20px;">
+                <a href="productos.html" class="btn-primario">Ver catálogo completo →</a>
+            </div>
+        </section>
+
+        <!-- MARCAS -->
+        <section class="tarjeta animar-scroll">
+            <h2>Marcas que manejamos</h2>
+            <div class="marcas">
+                <span>Honda</span>
+                <span>Yamaha</span>
+                <span>Suzuki</span>
+                <span>Kawasaki</span>
+                <span>Italika</span>
+                <span>Bajaj</span>
+                <span>Maverick</span>
+                <span>Carabela</span>
+            </div>
+        </section>
+
+        <!-- VENTAJAS -->
+        <section class="tarjeta animar-scroll">
+            <h2>¿Por qué elegirnos?</h2>
+            <div class="ventajas-grid">
+                <div class="ventaja-card">
+                    <span class="ventaja-icono">✅</span>
+                    <h3>Refacciones originales</h3>
+                    <p>Trabajamos solo con piezas de calidad garantizada.</p>
+                </div>
+                <div class="ventaja-card">
+                    <span class="ventaja-icono">💰</span>
+                    <h3>Precio justo</h3>
+                    <p>Los mejores precios del mercado sin sacrificar calidad.</p>
+                </div>
+                <div class="ventaja-card">
+                    <span class="ventaja-icono">👨‍🔧</span>
+                    <h3>Atención profesional</h3>
+                    <p>Personal capacitado para asesorarte correctamente.</p>
+                </div>
+                <div class="ventaja-card">
+                    <span class="ventaja-icono">📦</span>
+                    <h3>Amplio stock</h3>
+                    <p>Más de 500 refacciones y accesorios disponibles.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LLAMADO A LA ACCIÓN -->
+        <section class="tarjeta cta-seccion animar-scroll">
+            <h2>¿Necesitas una refacción específica?</h2>
+            <p>Contáctanos y te ayudamos a encontrar exactamente lo que tu moto necesita.</p>
+            <div class="hero-botones" style="margin-top: 20px;">
+                <a href="contacto.html" class="btn-primario">Contactar ahora</a>
+                <a href="https://www.facebook.com/share/1b5G9d21by/" target="_blank" class="btn-facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width:18px; vertical-align: middle; margin-right: 6px;">
+                    Facebook
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-col">
+                <h3>🏍️ Roda Motos</h3>
+                <p>Tu tienda de confianza en refacciones y accesorios para motocicleta en Huajuapan de León.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="RODAMOTOS.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p>📞 953 100 2370</p>
+                <p>📧 lppol0051@gmail.com</p>
+                <p>📍 Remigio Sarabia 76, Huajuapan de León, Oax.</p>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2024 Roda Motos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

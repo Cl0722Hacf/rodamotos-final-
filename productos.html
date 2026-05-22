@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roda Motos - Productos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="nav-logo">
+            <span class="logo-icon">🏍️</span>
+            <h2>Roda Motos</h2>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="RODAMOTOS.html">Inicio</a></li>
+            <li><a href="productos.html" class="activo">Productos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <header class="hero hero-pequeño">
+        <div class="hero-contenido">
+            <h1 class="animar-entrada">Catálogo de Productos</h1>
+            <p class="animar-entrada delay-1">Refacciones y accesorios para las principales marcas</p>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <main>
+
+        <!-- GRID DE PRODUCTOS -->
+        <section class="tarjeta animar-scroll">
+            <h2>Nuestros Productos</h2>
+            <div class="productos" id="listaProductos">
+
+                <!-- MOTOR -->
+                <div class="producto" data-categoria="motor" data-nombre="filtro de aire">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/filtro de aire.png"
+                             alt="Filtro de aire para motocicleta">
+                        <span class="etiqueta-producto">Popular</span>
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Motor</span>
+                        <h3>Filtro de aire</h3>
+                        <p>Mejora el rendimiento y protege el motor de tu moto.</p>
+                        <a href="#detalle" onclick="verDetalle('Filtro de aire','Motor','img/filtro de aire.png','Mejora el rendimiento de tu motor y lo protege de partículas de polvo. Compatible con Honda, Yamaha, Italika y más.',['Compatible con Honda, Yamaha, Italika, Bajaj', 'Material de espuma y algodón de alta filtración', 'Lavable y reutilizable', 'Garantía de 3 meses'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <div class="producto" data-categoria="motor" data-nombre="bujia encendido">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/bujía.png"
+                             alt="Bujía de iridio para motocicleta">
+                        <span class="etiqueta-producto">Top venta</span>
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Motor</span>
+                        <h3>Bujía</h3>
+                        <p>Encendido seguro y larga duración para tu motocicleta.</p>
+                        <a href="#detalle" onclick="verDetalle('Bujía','Motor','img/bujía.png','Bujía de iridio con encendido seguro y duración extendida. Ideal para motos de uso diario y largo recorrido.',['Punta de iridio de alta durabilidad', 'Encendido eficiente en frío y caliente', 'Compatible con motores de 50cc a 250cc', 'Garantía de 6 meses'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <div class="producto" data-categoria="motor" data-nombre="aceite motor lubricante">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/aceite de motor.png"
+                             alt="Aceite de motor sintético para motocicleta">
+                        <span class="etiqueta-producto">Nuevo</span>
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Motor</span>
+                        <h3>Aceite de motor</h3>
+                        <p>Lubricación óptima para mayor vida útil de tu moto.</p>
+                        <a href="#detalle" onclick="verDetalle('Aceite de motor','Motor','img/aceite de motor.png','Aceite sintético de alta calidad para lubricación óptima del motor. Extiende la vida útil y reduce el desgaste.',['Fórmula sintética de alto rendimiento', 'Viscosidad 10W-40 multigradual', 'Protege en frío y en caliente', 'Presentación 1L y 4L'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <div class="producto" data-categoria="motor" data-nombre="carburador gasolina">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/carburador.png"
+                             alt="Carburador para motocicleta">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Motor</span>
+                        <h3>Carburador</h3>
+                        <p>Mezcla perfecta de combustible para un motor eficiente.</p>
+                        <a href="#detalle" onclick="verDetalle('Carburador','Motor','img/carburador.png','Carburador de repuesto para reparación o mejora del sistema de combustible de tu motocicleta.',['Compatible con modelos populares', 'Resistente a la corrosión', 'Incluye juntas y tornillería', 'Garantía de 3 meses'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <!-- TRANSMISIÓN -->
+                <div class="producto" data-categoria="transmision" data-nombre="cadena pinon kit transmision">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/cadena y piñon.png"
+                             alt="Kit de cadena y piñón para motocicleta">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Transmisión</span>
+                        <h3>Cadena y piñón</h3>
+                        <p>Kits completos de mantenimiento para tu moto.</p>
+                        <a href="#detalle" onclick="verDetalle('Kit cadena y piñón','Transmisión','img/cadena y piñon.png','Kit completo con cadena de transmisión y piñón trasero. Resistente al desgaste y de larga duración.',['Acero reforzado de alta resistencia', 'Kit completo incluye cadena + piñón', 'Para motos de trabajo y urbanas', 'Fácil instalación'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <div class="producto" data-categoria="transmision" data-nombre="clutch embrague">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/kit de clutch.png"
+                             alt="Kit de clutch para motocicleta">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Transmisión</span>
+                        <h3>Kit de clutch</h3>
+                        <p>Discos de embrague de alta durabilidad y rendimiento.</p>
+                        <a href="#detalle" onclick="verDetalle('Kit de clutch','Transmisión','img/kit de clutch.png','Kit completo de discos de embrague para mayor agarre y rendimiento en la transmisión de potencia.',['Discos de fricción y acero incluidos', 'Alta resistencia al calor', 'Para motos trabajo y sport', 'Fácil instalación'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <!-- ELÉCTRICO -->
+                <div class="producto" data-categoria="electrico" data-nombre="bateria acumulador electrico">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/bateria.png"
+                             alt="Batería para motocicleta">
+                        <span class="etiqueta-producto">Oferta</span>
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Eléctrico</span>
+                        <h3>Batería</h3>
+                        <p>Potencia segura para arrancar tu moto en cualquier condición.</p>
+                        <a href="#detalle" onclick="verDetalle('Batería','Eléctrico','img/bateria.png','Batería de 12V para arranque confiable en cualquier condición climática y larga vida de carga.',['12V / 5Ah - 9Ah disponibles', 'Sin mantenimiento', 'Alta capacidad en frío', 'Garantía de 6 meses'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <div class="producto" data-categoria="electrico" data-nombre="faro luz delantera led">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/faroled.png"
+                             alt="Faro LED para motocicleta">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Eléctrico</span>
+                        <h3>Faro LED delantero</h3>
+                        <p>Mayor visibilidad nocturna con tecnología LED de alta eficiencia.</p>
+                        <a href="#detalle" onclick="verDetalle('Faro LED delantero','Eléctrico','img/faroled.png','Faro delantero LED de alta luminosidad. Mayor visibilidad nocturna con bajo consumo de energía.',['LED 30W de alta potencia', 'Luz blanca 6000K', 'Bajo consumo energético', 'Instalación Plug & Play'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <!-- FRENOS -->
+                <div class="producto" data-categoria="frenos" data-nombre="pastillas freno disco">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/pastilla de freno.png"
+                             alt="Pastillas de freno para motocicleta">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Frenos</span>
+                        <h3>Pastillas de freno</h3>
+                        <p>Frenado preciso y seguro en cualquier condición climática.</p>
+                        <a href="#detalle" onclick="verDetalle('Pastillas de freno','Frenos','img/pastilla de freno.png','Pastillas de freno de disco para frenado potente, progresivo y con baja generación de polvo.',['Material semimetálico de alta fricción', 'Baja generación de ruido', 'Compatibles con disco flotante y fijo', 'Garantía de 3 meses'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <div class="producto" data-categoria="frenos" data-nombre="disco freno rotor">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/disco de freno.png"
+                             alt="Disco de freno para motocicleta">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Frenos</span>
+                        <h3>Disco de freno</h3>
+                        <p>Alta resistencia al calor y desgaste prolongado.</p>
+                        <a href="#detalle" onclick="verDetalle('Disco de freno','Frenos','img/disco de freno.png','Disco de freno acanalado para mayor disipación de calor y mejor rendimiento de frenado.',['Acero inoxidable de alta resistencia', 'Diseño acanalado anti-deformación', 'Alta resistencia al calor', 'Garantía de 6 meses'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <!-- ACCESORIOS -->
+                <div class="producto" data-categoria="accesorios" data-nombre="casco proteccion seguridad">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/cascointegral.png"
+                             alt="Casco para motocicleta">
+                        <span class="etiqueta-producto">Nuevo</span>
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Accesorios</span>
+                        <h3>Casco integral</h3>
+                        <p>Protección total con diseño ergonómico y liviano.</p>
+                        <a href="#detalle" onclick="verDetalle('Casco integral','Accesorios','img/cascointegral.png','Casco integral con certificación de seguridad, diseño aerodinámico, visera antirrayaduras y ventilación.',['Certificado DOT y ECE 22.05', 'Carcasa de policarbonato', 'Interior extraíble y lavable', 'Visera antirrayaduras'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+                <div class="producto" data-categoria="accesorios" data-nombre="guantes manoplas conduccion">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/guantesdemoto.png"
+                             alt="Guantes de motocicleta">
+                    </div>
+                    <div class="producto-info">
+                        <span class="producto-categoria">Accesorios</span>
+                        <h3>Guantes de moto</h3>
+                        <p>Agarre firme y protección en cada vuelta del acelerador.</p>
+                        <a href="#detalle" onclick="verDetalle('Guantes de moto','Accesorios','img/guantesdemoto.png','Guantes de motociclismo con protección en nudillos y palma reforzada para uso urbano y carretera.',['Cuero sintético resistente al viento', 'Protección de nudillos', 'Palma antideslizante reforzada', 'Ajuste velcro en muñeca'])" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MENSAJE SIN RESULTADOS -->
+            <div id="sinResultados" class="sin-resultados oculto">
+                <p>😕 No se encontraron productos con ese nombre.</p>
+            </div>
+        </section>
+
+
+        <!-- DETALLE PRODUCTO -->
+        <section class="tarjeta" id="detalle" style="display:none;">
+            <button onclick="cerrarDetalle()" class="btn-regresar" style="margin-bottom:20px;">← Regresar al catálogo</button>
+            <div class="detalle-producto">
+                <div class="detalle-imagen">
+                    <img id="det-imagen" src="" alt="">
+                </div>
+                <div class="detalle-info">
+                    <span class="producto-categoria" id="det-categoria"></span>
+                    <h2 id="det-nombre" style="font-size:26px;margin:10px 0 12px;color:#111;"></h2>
+                    <p id="det-descripcion" class="detalle-descripcion"></p>
+                    <div class="detalle-caracteristicas">
+                        <h3>Características</h3>
+                        <ul class="ventajas" id="det-caracteristicas"></ul>
+                    </div>
+                    <div class="detalle-acciones">
+                        <a id="det-whatsapp" href="#" target="_blank" class="btn-primario btn-whatsapp">💬 Preguntar por WhatsApp</a>
+                        <a href="contacto.html" class="btn-secundario">📧 Contactar por correo</a>
+                    </div>
+                    <div class="detalle-aviso">
+                        <p>⚠️ El precio y disponibilidad pueden variar. Contáctanos para confirmar stock.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-col">
+                <h3>🏍️ Roda Motos</h3>
+                <p>Tu tienda de confianza en refacciones y accesorios para motocicleta en Huajuapan de León.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="RODAMOTOS.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p>📞 953 100 2370</p>
+                <p>📧 lppol0051@gmail.com</p>
+                <p>📍 Remigio Sarabia 76, Huajuapan de León, Oax.</p>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2024 Roda Motos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <script>
+    function verDetalle(nombre, categoria, imagen, descripcion, caracteristicas) {
+        document.getElementById('det-nombre').textContent = nombre;
+        document.getElementById('det-categoria').textContent = categoria;
+        document.getElementById('det-imagen').src = imagen;
+        document.getElementById('det-imagen').alt = nombre;
+        document.getElementById('det-descripcion').textContent = descripcion;
+        var lista = document.getElementById('det-caracteristicas');
+        lista.innerHTML = '';
+        caracteristicas.forEach(function(c) {
+            var li = document.createElement('li');
+            li.textContent = '✔ ' + c;
+            lista.appendChild(li);
+        });
+        var msg = encodeURIComponent('Hola, me interesa: ' + nombre + '. ¿Está disponible?');
+        document.getElementById('det-whatsapp').href = 'https://wa.me/529531002370?text=' + msg;
+
+        // Ocultar catálogo, mostrar detalle
+        document.querySelectorAll('main > section:not(#detalle)').forEach(function(s){ s.style.display='none'; });
+        var det = document.getElementById('detalle');
+        det.style.display = 'block';
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    function cerrarDetalle() {
+        document.querySelectorAll('main > section:not(#detalle)').forEach(function(s){ s.style.display=''; });
+        document.getElementById('detalle').style.display = 'none';
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    </script>
+
+</body>
+</html>

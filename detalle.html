@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roda Motos - Detalle de Producto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="nav-logo">
+            <span class="logo-icon">🏍️</span>
+            <h2>Roda Motos</h2>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="RODAMOTOS.html">Inicio</a></li>
+            <li><a href="productos.html" class="activo">Productos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <header class="hero hero-pequeño">
+        <div class="hero-contenido">
+            <h1 class="animar-entrada">Información del producto</h1>
+            <p class="animar-entrada delay-1">Contáctanos para conocer disponibilidad y precios</p>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <main>
+
+        <!-- REGRESAR -->
+        <section class="tarjeta animar-scroll">
+            <a href="productos.html" class="btn-regresar">← Regresar al catálogo</a>
+        </section>
+
+        <!-- DETALLE DEL PRODUCTO -->
+        <section class="tarjeta animar-scroll">
+            <div class="detalle-producto">
+
+                <div class="detalle-imagen">
+                    <img id="imagenProducto"
+                         src="img/filtro de aire.png"
+                         alt="Refacción para motocicleta">
+                </div>
+
+                <div class="detalle-info">
+                    <span class="producto-categoria" id="categoriaProducto">Refacción</span>
+                    <h2 id="nombreProducto">Filtro de aire</h2>
+                    <p id="descripcionProducto" class="detalle-descripcion">
+                        Mejora el rendimiento y protege el motor de tu moto. Disponible para las principales marcas del mercado.
+                    </p>
+
+                    <div class="detalle-caracteristicas">
+                        <h3>Características</h3>
+                        <ul class="ventajas" id="caracteristicasProducto">
+                            <li>✔ Compatible con múltiples modelos</li>
+                            <li>✔ Material de alta calidad</li>
+                            <li>✔ Garantía incluida</li>
+                            <li>✔ Instalación sencilla</li>
+                        </ul>
+                    </div>
+
+                    <div class="detalle-acciones">
+                        <a href="https://wa.me/529531002370?text=Hola,%20me%20interesa%20una%20refacci%C3%B3n"
+                           target="_blank" class="btn-primario btn-whatsapp">
+                            💬 Preguntar por WhatsApp
+                        </a>
+                        <a href="contacto.html" class="btn-secundario">
+                            📧 Contactar por correo
+                        </a>
+                    </div>
+
+                    <div class="detalle-aviso">
+                        <p>⚠️ El precio y disponibilidad pueden variar. Contáctanos para confirmar stock.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FACEBOOK -->
+        <section class="tarjeta animar-scroll">
+            <h2>Visítanos en Facebook</h2>
+            <p>Síguenos en nuestra página oficial para ver más productos, promociones y novedades.</p>
+            <div class="facebook-contenedor">
+                <a href="https://www.facebook.com/share/1b5G9d21by/" target="_blank" class="facebook-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                         alt="Logo de Facebook azul" class="facebook-logo">
+                    <div>
+                        <p class="facebook-nombre">Roda Motos</p>
+                        <p class="facebook-desc">Visita nuestra página oficial en Facebook para ver productos, promociones y más.</p>
+                        <span class="facebook-btn">Abrir en Facebook →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- CONTACTO RÁPIDO -->
+        <section class="tarjeta animar-scroll">
+            <h2>¿Tienes dudas?</h2>
+            <p>Comunícate con nosotros por cualquiera de estos medios:</p>
+            <ul class="ventajas" style="margin-top: 15px;">
+                <li>📞 Tel: <a href="tel:9531002370" style="color:#cc0000;">953 100 2370</a></li>
+                <li>📧 Email: <a href="mailto:lppol0051@gmail.com" style="color:#cc0000;">lppol0051@gmail.com</a></li>
+                <li>📍 Remigio Sarabia 76, Huajuapan de León, Oax.</li>
+            </ul>
+        </section>
+
+        <!-- PRODUCTOS RELACIONADOS -->
+        <section class="tarjeta animar-scroll">
+            <h2>También te puede interesar</h2>
+            <div class="productos">
+                <div class="producto">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/bujía.png"
+                             alt="Bujía para moto">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Bujía</h3>
+                        <p>Encendido seguro y duradero.</p>
+                        <a href="detalle.html?producto=bujia" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/aceite de motor.png"
+                             alt="Aceite de motor">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Aceite de motor</h3>
+                        <p>Lubricación óptima para tu moto.</p>
+                        <a href="detalle.html?producto=aceite-motor" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="producto-imagen-contenedor">
+                        <img src="img/cadena y piñon.png"
+                             alt="Cadena y piñón">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Cadena y piñón</h3>
+                        <p>Kit completo de transmisión.</p>
+                        <a href="detalle.html?producto=cadena-pinon" class="btn-ver-mas">Ver más →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-col">
+                <h3>🏍️ Roda Motos</h3>
+                <p>Tu tienda de confianza en refacciones y accesorios para motocicleta en Huajuapan de León.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="RODAMOTOS.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p>📞 953 100 2370</p>
+                <p>📧 lppol0051@gmail.com</p>
+                <p>📍 Remigio Sarabia 76, Huajuapan de León, Oax.</p>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2024 Roda Motos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

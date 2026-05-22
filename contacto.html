@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roda Motos - Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="nav-logo">
+            <span class="logo-icon">🏍️</span>
+            <h2>Roda Motos</h2>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="RODAMOTOS.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html" class="activo">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <header class="hero hero-pequeño">
+        <div class="hero-contenido">
+            <h1 class="animar-entrada">Contáctanos</h1>
+            <p class="animar-entrada delay-1">Estamos aquí para ayudarte con lo que necesites</p>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <main>
+
+        <!-- DATOS DE CONTACTO -->
+        <section class="tarjeta animar-scroll">
+            <h2>Información de contacto</h2>
+            <div class="contacto-grid">
+
+                <a href="tel:9531002370" class="contacto-card">
+                    <div class="contacto-icono">📞</div>
+                    <h3>Teléfono</h3>
+                    <p>953 100 2370</p>
+                    <span class="contacto-accion">Llamar ahora</span>
+                </a>
+
+                <a href="mailto:lppol0051@gmail.com" class="contacto-card">
+                    <div class="contacto-icono">📧</div>
+                    <h3>Correo electrónico</h3>
+                    <p>lppol0051@gmail.com</p>
+                    <span class="contacto-accion">Enviar correo</span>
+                </a>
+
+                <a href="https://wa.me/529531002370" target="_blank" class="contacto-card contacto-verde">
+                    <div class="contacto-icono">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>953 100 2370</p>
+                    <span class="contacto-accion">Abrir WhatsApp</span>
+                </a>
+
+                <a href="https://www.facebook.com/share/1b5G9d21by/" target="_blank" class="contacto-card contacto-azul">
+                    <div class="contacto-icono">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                             alt="Facebook" style="width: 32px;">
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>Roda Motos</p>
+                    <span class="contacto-accion">Visitar página</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- FORMULARIO DE CONTACTO -->
+        <section class="tarjeta animar-scroll">
+            <h2>Envíanos un mensaje</h2>
+            <p style="margin-bottom: 20px;">Rellena el formulario y te responderemos a la brevedad posible.</p>
+            <form class="formulario-contacto" id="formularioContacto" novalidate>
+
+                <div class="form-grupo">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                    <span class="form-error" id="error-nombre"></span>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. 953 100 0000">
+                </div>
+
+                <div class="form-grupo">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" placeholder="Ej. correo@ejemplo.com" required>
+                    <span class="form-error" id="error-email"></span>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="asunto">Asunto *</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="">-- Selecciona un tema --</option>
+                        <option value="cotizacion">Cotización de refacciones</option>
+                        <option value="disponibilidad">Consulta de disponibilidad</option>
+                        <option value="pedido">Pedido especial</option>
+                        <option value="garantia">Garantía o devolución</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <span class="form-error" id="error-asunto"></span>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="5"
+                              placeholder="Escribe aquí tu consulta o pedido..." required></textarea>
+                    <span class="form-error" id="error-mensaje"></span>
+                </div>
+
+                <button type="submit" class="btn-primario btn-form">Enviar mensaje ✉️</button>
+                <div id="mensajeExito" class="mensaje-exito oculto">
+                    ✅ ¡Mensaje enviado con éxito! Te contactaremos pronto.
+                </div>
+
+            </form>
+        </section>
+
+        <!-- UBICACIÓN -->
+        <section class="tarjeta animar-scroll">
+            <h2>📍 Encuéntranos aquí</h2>
+            <p style="margin-bottom: 15px;">Remigio Sarabia 76, Huajuapan de León, Oaxaca, México.</p>
+            <div class="mapa-contenedor">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.456!2d-97.7861!3d17.8034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c5e3b0e0000001%3A0x1!2sRemigio%20Sarabia%2076%2C%20Huajuapan%20de%20Le%C3%B3n%2C%20Oax.!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
+                    width="100%"
+                    height="350"
+                    style="border:0; border-radius: 10px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de Roda Motos en Google Maps">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- HORARIO -->
+        <section class="tarjeta animar-scroll">
+            <h2>🕐 Horario de atención</h2>
+            <div class="horario-tabla">
+                <div class="horario-fila cabecera">
+                    <span>Día</span>
+                    <span>Horario</span>
+                </div>
+                <div class="horario-fila">
+                    <span>Lunes – Viernes</span>
+                    <span class="horario-abierto">9:00 AM – 7:00 PM</span>
+                </div>
+                <div class="horario-fila">
+                    <span>Sábado</span>
+                    <span class="horario-abierto">9:00 AM – 5:00 PM</span>
+                </div>
+                <div class="horario-fila">
+                    <span>Domingo</span>
+                    <span class="horario-cerrado">Cerrado</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-col">
+                <h3>🏍️ Roda Motos</h3>
+                <p>Tu tienda de confianza en refacciones y accesorios para motocicleta en Huajuapan de León.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="RODAMOTOS.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p>📞 953 100 2370</p>
+                <p>📧 lppol0051@gmail.com</p>
+                <p>📍 Remigio Sarabia 76, Huajuapan de León, Oax.</p>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2024 Roda Motos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
