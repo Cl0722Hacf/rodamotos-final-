@@ -1,0 +1,242 @@
+[
+  {
+    "id": "filtro-aire",
+    "nombre": "Filtro de aire",
+    "categoria": "Motor",
+    "categoriaClave": "motor",
+    "busqueda": "filtro de aire motor honda yamaha italika",
+    "descripcionCorta": "Mejora el rendimiento y protege el motor de tu moto.",
+    "descripcion": "Mejora el rendimiento de tu motor y lo protege de partículas de polvo. Compatible con Honda, Yamaha, Italika y más.",
+    "imagen": "img/filtro de aire.png",
+    "alt": "Filtro de aire para motocicleta",
+    "etiqueta": "Popular",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Compatible con Honda, Yamaha, Italika, Bajaj",
+      "Material de espuma y algodón de alta filtración",
+      "Lavable y reutilizable",
+      "Garantía de 3 meses"
+    ]
+  },
+  {
+    "id": "bujia",
+    "nombre": "Bujía",
+    "categoria": "Motor",
+    "categoriaClave": "motor",
+    "busqueda": "bujia encendido motor iridio",
+    "descripcionCorta": "Encendido seguro y larga duración para tu motocicleta.",
+    "descripcion": "Bujía de iridio con encendido seguro y duración extendida. Ideal para motos de uso diario y largo recorrido.",
+    "imagen": "img/bujía.png",
+    "alt": "Bujía de iridio para motocicleta",
+    "etiqueta": "Top venta",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Punta de iridio de alta durabilidad",
+      "Encendido eficiente en frío y caliente",
+      "Compatible con motores de 50cc a 250cc",
+      "Garantía de 6 meses"
+    ]
+  },
+  {
+    "id": "aceite-motor",
+    "nombre": "Aceite de motor",
+    "categoria": "Motor",
+    "categoriaClave": "motor",
+    "busqueda": "aceite motor lubricante sintetico 10w40",
+    "descripcionCorta": "Lubricación óptima para mayor vida útil de tu moto.",
+    "descripcion": "Aceite sintético de alta calidad para lubricación óptima del motor. Extiende la vida útil y reduce el desgaste.",
+    "imagen": "img/aceite de motor.png",
+    "alt": "Aceite de motor sintético para motocicleta",
+    "etiqueta": "Nuevo",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Fórmula sintética de alto rendimiento",
+      "Viscosidad 10W-40 multigradual",
+      "Protege en frío y en caliente",
+      "Presentación 1L y 4L"
+    ]
+  },
+  {
+    "id": "carburador",
+    "nombre": "Carburador",
+    "categoria": "Motor",
+    "categoriaClave": "motor",
+    "busqueda": "carburador gasolina motor combustible",
+    "descripcionCorta": "Mezcla perfecta de combustible para un motor eficiente.",
+    "descripcion": "Carburador de repuesto para reparación o mejora del sistema de combustible de tu motocicleta.",
+    "imagen": "img/carburador.png",
+    "alt": "Carburador para motocicleta",
+    "etiqueta": "",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Compatible con modelos populares",
+      "Resistente a la corrosión",
+      "Incluye juntas y tornillería",
+      "Garantía de 3 meses"
+    ]
+  },
+  {
+    "id": "cadena-pinon",
+    "nombre": "Kit cadena y piñón",
+    "categoria": "Transmisión",
+    "categoriaClave": "transmision",
+    "busqueda": "cadena pinon kit transmision",
+    "descripcionCorta": "Kits completos de mantenimiento para tu moto.",
+    "descripcion": "Kit completo con cadena de transmisión y piñón trasero. Resistente al desgaste y de larga duración.",
+    "imagen": "img/cadena y piñon.png",
+    "alt": "Kit de cadena y piñón para motocicleta",
+    "etiqueta": "",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Acero reforzado de alta resistencia",
+      "Kit completo incluye cadena + piñón",
+      "Para motos de trabajo y urbanas",
+      "Fácil instalación"
+    ]
+  },
+  {
+    "id": "kit-clutch",
+    "nombre": "Kit de clutch",
+    "categoria": "Transmisión",
+    "categoriaClave": "transmision",
+    "busqueda": "clutch embrague transmision kit",
+    "descripcionCorta": "Discos de embrague de alta durabilidad y rendimiento.",
+    "descripcion": "Kit completo de discos de embrague para mayor agarre y rendimiento en la transmisión de potencia.",
+    "imagen": "img/kit de clutch.png",
+    "alt": "Kit de clutch para motocicleta",
+    "etiqueta": "",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Discos de fricción y acero incluidos",
+      "Alta resistencia al calor",
+      "Para motos trabajo y sport",
+      "Fácil instalación"
+    ]
+  },
+  {
+    "id": "bateria",
+    "nombre": "Batería",
+    "categoria": "Eléctrico",
+    "categoriaClave": "electrico",
+    "busqueda": "bateria acumulador electrico 12v",
+    "descripcionCorta": "Potencia segura para arrancar tu moto en cualquier condición.",
+    "descripcion": "Batería de 12V para arranque confiable en cualquier condición climática y larga vida de carga.",
+    "imagen": "img/bateria.png",
+    "alt": "Batería para motocicleta",
+    "etiqueta": "Oferta",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "12V / 5Ah - 9Ah disponibles",
+      "Sin mantenimiento",
+      "Alta capacidad en frío",
+      "Garantía de 6 meses"
+    ]
+  },
+  {
+    "id": "faro-led",
+    "nombre": "Faro LED delantero",
+    "categoria": "Eléctrico",
+    "categoriaClave": "electrico",
+    "busqueda": "faro luz delantera led electrico",
+    "descripcionCorta": "Mayor visibilidad nocturna con tecnología LED de alta eficiencia.",
+    "descripcion": "Faro delantero LED de alta luminosidad. Mayor visibilidad nocturna con bajo consumo de energía.",
+    "imagen": "img/faroled.png",
+    "alt": "Faro LED para motocicleta",
+    "etiqueta": "",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "LED 30W de alta potencia",
+      "Luz blanca 6000K",
+      "Bajo consumo energético",
+      "Instalación Plug & Play"
+    ]
+  },
+  {
+    "id": "pastillas-freno",
+    "nombre": "Pastillas de freno",
+    "categoria": "Frenos",
+    "categoriaClave": "frenos",
+    "busqueda": "pastillas freno disco frenado",
+    "descripcionCorta": "Frenado preciso y seguro en cualquier condición climática.",
+    "descripcion": "Pastillas de freno de disco para frenado potente, progresivo y con baja generación de polvo.",
+    "imagen": "img/pastilla de freno.png",
+    "alt": "Pastillas de freno para motocicleta",
+    "etiqueta": "",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Material semimetálico de alta fricción",
+      "Baja generación de ruido",
+      "Compatibles con disco flotante y fijo",
+      "Garantía de 3 meses"
+    ]
+  },
+  {
+    "id": "disco-freno",
+    "nombre": "Disco de freno",
+    "categoria": "Frenos",
+    "categoriaClave": "frenos",
+    "busqueda": "disco freno rotor frenado",
+    "descripcionCorta": "Alta resistencia al calor y desgaste prolongado.",
+    "descripcion": "Disco de freno acanalado para mayor disipación de calor y mejor rendimiento de frenado.",
+    "imagen": "img/disco de freno.png",
+    "alt": "Disco de freno para motocicleta",
+    "etiqueta": "",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Acero inoxidable de alta resistencia",
+      "Diseño acanalado anti-deformación",
+      "Alta resistencia al calor",
+      "Garantía de 6 meses"
+    ]
+  },
+  {
+    "id": "casco-integral",
+    "nombre": "Casco integral",
+    "categoria": "Accesorios",
+    "categoriaClave": "accesorios",
+    "busqueda": "casco proteccion seguridad accesorios",
+    "descripcionCorta": "Protección total con diseño ergonómico y liviano.",
+    "descripcion": "Casco integral con certificación de seguridad, diseño aerodinámico, visera antirrayaduras y ventilación.",
+    "imagen": "img/cascointegral.png",
+    "alt": "Casco para motocicleta",
+    "etiqueta": "Nuevo",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Certificado DOT y ECE 22.05",
+      "Carcasa de policarbonato",
+      "Interior extraíble y lavable",
+      "Visera antirrayaduras"
+    ]
+  },
+  {
+    "id": "guantes-moto",
+    "nombre": "Guantes de moto",
+    "categoria": "Accesorios",
+    "categoriaClave": "accesorios",
+    "busqueda": "guantes manoplas conduccion accesorios",
+    "descripcionCorta": "Agarre firme y protección en cada vuelta del acelerador.",
+    "descripcion": "Guantes de motociclismo con protección en nudillos y palma reforzada para uso urbano y carretera.",
+    "imagen": "img/guantesdemoto.png",
+    "alt": "Guantes de motocicleta",
+    "etiqueta": "",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Cuero sintético resistente al viento",
+      "Protección de nudillos",
+      "Palma antideslizante reforzada",
+      "Ajuste velcro en muñeca"
+    ]
+  }
+]

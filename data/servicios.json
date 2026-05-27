@@ -1,0 +1,68 @@
+[
+  {
+    "id": "asesoria-tecnica",
+    "icono": "🔧",
+    "nombre": "Asesoría técnica",
+    "descripcion": "¿No sabes qué refacción necesita tu moto? Nuestros expertos te orientan sin costo adicional para encontrar la pieza correcta.",
+    "detalles": [
+      "Diagnóstico de fallas comunes",
+      "Recomendación de piezas",
+      "Orientación sobre marcas compatibles"
+    ]
+  },
+  {
+    "id": "venta-refacciones",
+    "icono": "📦",
+    "nombre": "Venta de refacciones",
+    "descripcion": "Contamos con amplio stock de piezas originales y de repuesto para las principales marcas del mercado nacional.",
+    "detalles": [
+      "Más de 500 piezas disponibles",
+      "Marcas Honda, Yamaha, Italika, Bajaj y más",
+      "Pedidos especiales en 24-72 hrs"
+    ]
+  },
+  {
+    "id": "garantia-producto",
+    "icono": "🛡️",
+    "nombre": "Garantía de producto",
+    "descripcion": "Todos nuestros productos cuentan con garantía. Si algo falla, nosotros respondemos por la pieza vendida.",
+    "detalles": [
+      "Garantía en piezas originales",
+      "Cambio sin complicaciones",
+      "Atención al cliente post-venta"
+    ]
+  },
+  {
+    "id": "busqueda-piezas",
+    "icono": "🔍",
+    "nombre": "Búsqueda de piezas",
+    "descripcion": "¿No encontraste lo que buscabas? Solicítalo y nosotros lo conseguimos. Manejamos pedidos especiales para modelos específicos.",
+    "detalles": [
+      "Búsqueda en proveedores especializados",
+      "Importación de piezas difíciles",
+      "Notificación cuando esté disponible"
+    ]
+  },
+  {
+    "id": "atencion-digital",
+    "icono": "💬",
+    "nombre": "Atención por WhatsApp y Facebook",
+    "descripcion": "Recibe atención personalizada sin salir de casa. Consulta disponibilidad, precios y haz tu pedido por mensajería.",
+    "detalles": [
+      "Respuesta rápida en horario de atención",
+      "Envío de fotos y especificaciones",
+      "Cotizaciones al momento"
+    ]
+  },
+  {
+    "id": "mantenimiento-preventivo",
+    "icono": "📋",
+    "nombre": "Mantenimiento preventivo",
+    "descripcion": "Te asesoramos sobre el programa de mantenimiento ideal para tu motocicleta según el modelo y los kilómetros recorridos.",
+    "detalles": [
+      "Plan de cambio de aceite",
+      "Revisión de frenos y cadena",
+      "Lista de revisión completa"
+    ]
+  }
+]
