@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     activarNavbarScroll();
     activarAnimacionesScroll();
     activarContadorEstadisticas();
+    cargarProductosDesdeBD();
+    cargarServiciosDesdeBD();
     activarBuscadorProductos();
     activarFiltrosProductos();
     activarFormularioContacto();
@@ -338,3 +340,130 @@ function activarDetalleProducto() {
             elemento.textContent = textoActual.substring(0, indiceLetra + 1);
             indiceLetra++;
             if (indice
+
+/* ==========================================================
+   BASE DE DATOS SIMPLE EN JSON
+   ----------------------------------------------------------
+   GitHub Pages no ejecuta bases de datos como Access, MySQL
+   o SQL Server. Por eso usamos archivos JSON como una base
+   ligera que la página puede leer directamente desde el sitio.
+   Para editar productos o servicios, basta actualizar los
+   archivos data/productos.json y data/servicios.json.
+   ========================================================== */
+
+var productosBD = [];
+
+function normalizarTexto(texto) {
+    return (texto || "")
+        .toString()
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+}
+
+function escaparHTML(valor) {
+    return (valor || "")
+        .toString()
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function cargarJSON(ruta) {
+    return fetch(ruta, { cache: "no-store" }).then(function (respuesta) {
+        if (!respuesta.ok) {
+            throw new Error("No se pudo cargar " + ruta);
+        }
+        return respuesta.json();
+    });
+}
+
+function cargarProductosDesdeBD() {
+    var contenedor = document.getElementById("listaProductos");
+    if (!contenedor) return;
+
+    cargarJSON("data/productos.json")
+        .then(function (productos) {
+            productosBD = productos;
+            renderizarProductos(productos);
+            filtrarProductos("", obtenerCategoriaActiva());
+        })
+        .catch(function (error) {
+            console.warn("Se usará el catálogo escrito en HTML porque no cargó productos.json:", error);
+        });
+}
+
+function renderizarProductos(productos) {
+    var contenedor = document.getElementById("listaProductos");
+    if (!contenedor) return;
+
+    contenedor.innerHTML = productos.map(function (producto) {
+        var etiqueta = producto.etiqueta
+            ? '<span class="etiqueta-producto">' + escaparHTML(producto.etiqueta) + '</span>'
+            : '';
+
+        var busqueda = normalizarTexto([
+            producto.nombre,
+            producto.categoria,
+            producto.busqueda,
+            producto.descripcionCorta
+        ].join(" "));
+
+        return '' +
+            '<div class="producto" data-id="' + escaparHTML(producto.id) + '" data-categoria="' + escaparHTML(producto.categoriaClave) + '" data-nombre="' + escaparHTML(busqueda) + '">' +
+                '<div class="producto-imagen-contenedor">' +
+                    '<img src="' + escaparHTML(producto.imagen) + '" alt="' + escaparHTML(producto.alt || producto.nombre) + '">' +
+                    etiqueta +
+                '</div>' +
+                '<div class="producto-info">' +
+                    '<span class="producto-categoria">' + escaparHTML(producto.categoria) + '</span>' +
+                    '<h3>' + escaparHTML(producto.nombre) + '</h3>' +
+                    '<p>' + escaparHTML(producto.descripcionCorta) + '</p>' +
+                    '<a href="#detalle" onclick="verDetalleProductoBD(\'' + escaparHTML(producto.id) + '\')" class="btn-ver-mas">Ver más →</a>' +
+                '</div>' +
+            '</div>';
+    }).join("");
+}
+
+function verDetalleProductoBD(idProducto) {
+    var producto = productosBD.find(function (item) { return item.id === idProducto; });
+    if (!producto) return;
+
+    if (typeof verDetalle === "function") {
+        verDetalle(
+            producto.nombre,
+            producto.categoria,
+            producto.imagen,
+            producto.descripcion,
+            producto.caracteristicas || []
+        );
+    }
+}
+
+function cargarServiciosDesdeBD() {
+    var contenedor = document.getElementById("listaServicios");
+    if (!contenedor) return;
+
+    cargarJSON("data/servicios.json")
+        .then(function (servicios) {
+            contenedor.innerHTML = servicios.map(function (servicio) {
+                var detalles = (servicio.detalles || []).map(function (detalle) {
+                    return '<li>' + escaparHTML(detalle) + '</li>';
+                }).join("");
+
+                return '' +
+                    '<div class="servicio-card">' +
+                        '<div class="servicio-icono">' + escaparHTML(servicio.icono) + '</div>' +
+                        '<h3>' + escaparHTML(servicio.nombre) + '</h3>' +
+                        '<p>' + escaparHTML(servicio.descripcion) + '</p>' +
+                        '<ul class="servicio-lista">' + detalles + '</ul>' +
+                    '</div>';
+            }).join("");
+        })
+        .catch(function (error) {
+            console.warn("Se usará la sección escrita en HTML porque no cargó servicios.json:", error);
+        });
+}
