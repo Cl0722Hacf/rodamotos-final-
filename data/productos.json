@@ -238,5 +238,165 @@
       "Palma antideslizante reforzada",
       "Ajuste velcro en muñeca"
     ]
+  },
+  {
+    "id": "filtro-aceite",
+    "nombre": "Filtro de aceite",
+    "categoria": "Motor",
+    "categoriaClave": "motor",
+    "busqueda": "filtro aceite motor lubricacion mantenimiento",
+    "descripcionCorta": "Retiene impurezas del aceite para proteger el motor.",
+    "descripcion": "Filtro de aceite para motocicleta, ideal para mantenimiento preventivo y cambios de lubricante. Ayuda a mantener el motor limpio y protegido.",
+    "imagen": "img/aceite de motor.png",
+    "alt": "Filtro de aceite para motocicleta",
+    "etiqueta": "Mantenimiento",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Compatible con motos urbanas y de trabajo",
+      "Protege contra residuos metálicos y suciedad",
+      "Recomendado en cada cambio de aceite",
+      "Instalación rápida"
+    ]
+  },
+  {
+    "id": "liquido-frenos",
+    "nombre": "Líquido de frenos",
+    "categoria": "Frenos",
+    "categoriaClave": "frenos",
+    "busqueda": "liquido frenos dot freno hidraulico",
+    "descripcionCorta": "Respuesta firme y segura en sistemas de freno hidráulico.",
+    "descripcion": "Líquido de frenos para mantener una respuesta precisa en el sistema hidráulico. Recomendado para mantenimiento preventivo de frenos.",
+    "imagen": "img/disco de freno.png",
+    "alt": "Líquido de frenos para motocicleta",
+    "etiqueta": "Seguridad",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Compatible con sistemas DOT comunes",
+      "Ayuda a evitar pérdida de presión",
+      "Ideal para servicio de frenos",
+      "Presentación práctica para motocicleta"
+    ]
+  },
+  {
+    "id": "balatas-traseras",
+    "nombre": "Balatas traseras",
+    "categoria": "Frenos",
+    "categoriaClave": "frenos",
+    "busqueda": "balatas traseras freno tambor pastillas",
+    "descripcionCorta": "Frenado confiable para uso diario y reparto.",
+    "descripcion": "Balatas traseras resistentes al desgaste, recomendadas para motocicletas de trabajo, reparto y uso urbano frecuente.",
+    "imagen": "img/pastilla de freno.png",
+    "alt": "Balatas traseras para motocicleta",
+    "etiqueta": "Top venta",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Buen agarre en frenado progresivo",
+      "Baja generación de ruido",
+      "Material resistente al calor",
+      "Disponibles para varios modelos"
+    ]
+  },
+  {
+    "id": "chicote-acelerador",
+    "nombre": "Chicote de acelerador",
+    "categoria": "Transmisión",
+    "categoriaClave": "transmision",
+    "busqueda": "chicote acelerador cable acelerador moto",
+    "descripcionCorta": "Control suave y preciso del acelerador.",
+    "descripcion": "Cable o chicote de acelerador para recuperar respuesta suave en el puño y evitar jalones durante la conducción.",
+    "imagen": "img/kit de clutch.png",
+    "alt": "Chicote de acelerador para motocicleta",
+    "etiqueta": "Nuevo",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Forro resistente a la fricción",
+      "Respuesta suave del acelerador",
+      "Compatible con modelos populares",
+      "Repuesto de mantenimiento frecuente"
+    ]
+  },
+  {
+    "id": "chicote-clutch",
+    "nombre": "Chicote de clutch",
+    "categoria": "Transmisión",
+    "categoriaClave": "transmision",
+    "busqueda": "chicote clutch embrague cable",
+    "descripcionCorta": "Accionamiento suave del embrague para cambios precisos.",
+    "descripcion": "Chicote de clutch reforzado para mejorar el accionamiento del embrague y reducir fallas por cables desgastados.",
+    "imagen": "img/kit de clutch.png",
+    "alt": "Chicote de clutch para motocicleta",
+    "etiqueta": "Mantenimiento",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Cable reforzado de larga duración",
+      "Reduce esfuerzo en la manija",
+      "Ideal para motos de trabajo",
+      "Fácil reemplazo"
+    ]
+  },
+  {
+    "id": "direccionales-led",
+    "nombre": "Direccionales LED",
+    "categoria": "Eléctrico",
+    "categoriaClave": "electrico",
+    "busqueda": "direccionales led luces señales electrico",
+    "descripcionCorta": "Señales luminosas modernas con bajo consumo.",
+    "descripcion": "Juego de direccionales LED para mejorar la visibilidad de giro y renovar la apariencia de la motocicleta.",
+    "imagen": "img/faroled.png",
+    "alt": "Direccionales LED para motocicleta",
+    "etiqueta": "Nuevo",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Bajo consumo de energía",
+      "Luz intensa y visible",
+      "Diseño compacto universal",
+      "Juego delantero o trasero según disponibilidad"
+    ]
+  },
+  {
+    "id": "regulador-corriente",
+    "nombre": "Regulador de corriente",
+    "categoria": "Eléctrico",
+    "categoriaClave": "electrico",
+    "busqueda": "regulador corriente rectificador bateria electrico",
+    "descripcionCorta": "Protege la batería y estabiliza el sistema eléctrico.",
+    "descripcion": "Regulador rectificador para controlar la carga de la batería y evitar fallas eléctricas por voltaje irregular.",
+    "imagen": "img/bateria.png",
+    "alt": "Regulador de corriente para motocicleta",
+    "etiqueta": "Eléctrico",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Ayuda a estabilizar el voltaje",
+      "Protege batería y luces",
+      "Compatible con motos de baja y media cilindrada",
+      "Revisión recomendada antes de instalar"
+    ]
+  },
+  {
+    "id": "impermeable-motociclista",
+    "nombre": "Impermeable para motociclista",
+    "categoria": "Accesorios",
+    "categoriaClave": "accesorios",
+    "busqueda": "impermeable lluvia motociclista accesorios",
+    "descripcionCorta": "Protección ligera contra lluvia para viajes diarios.",
+    "descripcion": "Impermeable práctico para motociclista, ideal para temporada de lluvias, traslados urbanos y trabajo de reparto.",
+    "imagen": "img/guantesdemoto.png",
+    "alt": "Impermeable para motociclista",
+    "etiqueta": "Temporada",
+    "precio": "Consultar",
+    "stock": "Disponible",
+    "caracteristicas": [
+      "Material ligero y resistente al agua",
+      "Fácil de guardar bajo el asiento",
+      "Disponible por tallas según stock",
+      "Ideal para uso diario"
+    ]
   }
 ]
