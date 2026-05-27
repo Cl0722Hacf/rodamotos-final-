@@ -339,7 +339,27 @@ function activarDetalleProducto() {
         if (!borrando) {
             elemento.textContent = textoActual.substring(0, indiceLetra + 1);
             indiceLetra++;
-            if (indice
+
+            if (indiceLetra === textoActual.length) {
+                borrando = true;
+                setTimeout(escribir, 1600);
+                return;
+            }
+        } else {
+            elemento.textContent = textoActual.substring(0, indiceLetra - 1);
+            indiceLetra--;
+
+            if (indiceLetra === 0) {
+                borrando = false;
+                indiceTexto = (indiceTexto + 1) % textos.length;
+            }
+        }
+
+        setTimeout(escribir, borrando ? 60 : 110);
+    }
+
+    escribir();
+})();
 
 /* ==========================================================
    BASE DE DATOS SIMPLE EN JSON
