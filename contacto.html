@@ -195,5 +195,34 @@
         </div>
     </footer>
   <script src="js/script.js"></script>
+    >script type="module">
+      import { db } from "./firebase-config.js";
+      import { collection, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+
+      const formulario = document.getElementById("formularioContacto");
+      const mensajeExito = document.getElementById("mensajeExito");
+
+      formulario.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        try {
+          await addDoc(collection(db, "mensajes"), {
+            nombre:   document.getElementById("nombre").value,
+            telefono: document.getElementById("telefono").value,
+            correo:   document.getElementById("email").value,
+            asunto:   document.getElementById("asunto").value,
+            mensaje:  document.getElementById("mensaje").value,
+            fecha:    Timestamp.now()
+          });
+
+          mensajeExito.classList.remove("oculto");
+          formulario.reset();
+
+        } catch (error) {
+          console.error("Error al enviar mensaje:", error);
+          alert("Hubo un error al enviar el mensaje. Intenta de nuevo.");
+        }
+      });
+    >/script>
 </body>
 </html>
