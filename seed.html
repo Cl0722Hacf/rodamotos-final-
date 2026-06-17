@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Poblar Firestore - Rodamotos</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+    h1 { color: #e63946; }
+    #log p { margin: 4px 0; font-size: 14px; }
+    .ok { color: green; } .error { color: red; } .info { color: #555; }
+    #done { font-size: 20px; font-weight: bold; color: green; margin-top: 20px; display: none; }
+  </style>
+</head>
+<body>
+  <h1>🔥 Poblando Firestore - Rodamotos</h1>
+  <p>Espera unos segundos...</p>
+  <div id="log"></div>
+  <div id="done">✅ ¡Listo! Ya puedes cerrar esta página.</div>
+
+  <script type="module">
+    import { db } from "./firebase-config.js";
+    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+
+    const log = document.getElementById("log");
+    const done = document.getElementById("done");
+    const msg = (text, cls = "info") => { log.innerHTML += `<p class="${cls}">${text}</p>`; };
+
+    const categorias = [
+      { nombre: "Motor",      slug: "motor",       icono: "⚙️",  orden: 1 },
+      { nombre: "Transmisión",slug: "transmision",  icono: "🔗",  orden: 2 },
+      { nombre: "Eléctrico",  slug: "electrico",   icono: "⚡",  orden: 3 },
+      { nombre: "Frenos",     slug: "frenos",      icono: "🛑",  orden: 4 },
+      { nombre: "Accesorios", slug: "accesorios",  icono: "🪖",  orden: 5 }
+    ];
+
+    const marcas = [
+      { nombre: "Honda"  },
+      { nombre: "Yamaha" },
+      { nombre: "Italika"},
+      { nombre: "Bajaj"  }
+    ];
+
+    const productos = [
+      {
+        nombre: "Filtro de aire", categoria: "motor", etiqueta: "Popular",
+        imagen: "img/filtro de aire.png",
+        descripcionCorta: "Mejora el rendimiento y protege el motor de tu moto.",
+        descripcion: "Mejora el rendimiento de tu motor y lo protege de partículas de polvo. Compatible con Honda, Yamaha, Italika y más.",
+        caracteristicas: ["Compatible con Honda, Yamaha, Italika, Bajaj","Material de espuma y algodón de alta filtración","Lavable y reutilizable","Garantía de 3 meses"],
+        orden: 1
+      },
+      {
+        nombre: "Bujía", categoria: "motor", etiqueta: "Top venta",
+        imagen: "img/bujía.png",
+        descripcionCorta: "Encendido seguro y larga duración para tu motocicleta.",
+        descripcion: "Bujía de iridio con encendido seguro y duración extendida. Ideal para motos de uso diario y largo recorrido.",
+        caracteristicas: ["Punta de iridio de alta durabilidad","Encendido eficiente en frío y caliente","Compatible con motores de 50cc a 250cc","Garantía de 6 meses"],
+        orden: 2
+      },
+      {
+        nombre: "Aceite de motor", categoria: "motor", etiqueta: "Nuevo",
+        imagen: "img/aceite de motor.png",
+        descripcionCorta: "Lubricación óptima para mayor vida útil de tu moto.",
+        descripcion: "Aceite sintético de alta calidad para lubricación óptima del motor. Extiende la vida útil y reduce el desgaste.",
+        caracteristicas: ["Fórmula sintética de alto rendimiento","Viscosidad 10W-40 multigradual","Protege en frío y en caliente","Presentación 1L y 4L"],
+        orden: 3
+      },
+      {
+        nombre: "Carburador", categoria: "motor", etiqueta: "",
+        imagen: "img/carburador.png",
+        descripcionCorta: "Mezcla perfecta de combustible para un motor eficiente.",
+        descripcion: "Carburador de repuesto para reparación o mejora del sistema de combustible de tu motocicleta.",
+        caracteristicas: ["Compatible con modelos populares","Resistente a la corrosión","Incluye juntas y tornillería","Garantía de 3 meses"],
+        orden: 4
+      },
+      {
+        nombre: "Kit cadena y piñón", categoria: "transmision", etiqueta: "",
+        imagen: "img/cadena y piñon.png",
+        descripcionCorta: "Kits completos de mantenimiento para tu moto.",
+        descripcion: "Kit completo con cadena de transmisión y piñón trasero. Resistente al desgaste y de larga duración.",
+        caracteristicas: ["Acero reforzado de alta resistencia","Kit completo incluye cadena + piñón","Para motos de trabajo y urbanas","Fácil instalación"],
+        orden: 5
+      },
+      {
+        nombre: "Kit de clutch", categoria: "transmision", etiqueta: "",
+        imagen: "img/kit de clutch.png",
+        descripcionCorta: "Discos de embrague de alta durabilidad y rendimiento.",
+        descripcion: "Kit completo de discos de embrague para mayor agarre y rendimiento en la transmisión de potencia.",
+        caracteristicas: ["Discos de fricción y acero incluidos","Alta resistencia al calor","Para motos trabajo y sport","Fácil instalación"],
+        orden: 6
+      },
+      {
+        nombre: "Batería", categoria: "electrico", etiqueta: "Oferta",
+        imagen: "img/bateria.png",
+        descripcionCorta: "Potencia segura para arrancar tu moto en cualquier condición.",
+        descripcion: "Batería de 12V para arranque confiable en cualquier condición climática y larga vida de carga.",
+        caracteristicas: ["12V / 5Ah - 9Ah disponibles","Sin mantenimiento","Alta capacidad en frío","Garantía de 6 meses"],
+        orden: 7
+      },
+      {
+        nombre: "Faro LED delantero", categoria: "electrico", etiqueta: "",
+        imagen: "img/faroled.png",
+        descripcionCorta: "Mayor visibilidad nocturna con tecnología LED de alta eficiencia.",
+        descripcion: "Faro delantero LED de alta luminosidad. Mayor visibilidad nocturna con bajo consumo de energía.",
+        caracteristicas: ["LED 30W de alta potencia","Luz blanca 6000K","Bajo consumo energético","Instalación Plug & Play"],
+        orden: 8
+      },
+      {
+        nombre: "Pastillas de freno", categoria: "frenos", etiqueta: "",
+        imagen: "img/pastilla de freno.png",
+        descripcionCorta: "Frenado preciso y seguro en cualquier condición climática.",
+        descripcion: "Pastillas de freno de disco para frenado potente, progresivo y con baja generación de polvo.",
+        caracteristicas: ["Material semimetálico de alta fricción","Baja generación de ruido","Compatibles con disco flotante y fijo","Garantía de 3 meses"],
+        orden: 9
+      },
+      {
+        nombre: "Disco de freno", categoria: "frenos", etiqueta: "",
+        imagen: "img/disco de freno.png",
+        descripcionCorta: "Alta resistencia al calor y desgaste prolongado.",
+        descripcion: "Disco de freno acanalado para mayor disipación de calor y mejor rendimiento de frenado.",
+        caracteristicas: ["Acero inoxidable de alta resistencia","Diseño acanalado anti-deformación","Alta resistencia al calor","Garantía de 6 meses"],
+        orden: 10
+      },
+      {
+        nombre: "Casco integral", categoria: "accesorios", etiqueta: "Nuevo",
+        imagen: "img/cascointegral.png",
+        descripcionCorta: "Protección total con diseño ergonómico y liviano.",
+        descripcion: "Casco integral con certificación de seguridad, diseño aerodinámico, visera antirrayaduras y ventilación.",
+        caracteristicas: ["Certificado DOT y ECE 22.05","Carcasa de policarbonato","Interior extraíble y lavable","Visera antirrayaduras"],
+        orden: 11
+      },
+      {
+        nombre: "Guantes de moto", categoria: "accesorios", etiqueta: "",
+        imagen: "img/guantesdemoto.png",
+        descripcionCorta: "Agarre firme y protección en cada vuelta del acelerador.",
+        descripcion: "Guantes de motociclismo con protección en nudillos y palma reforzada para uso urbano y carretera.",
+        caracteristicas: ["Cuero sintético resistente al viento","Protección de nudillos","Palma antideslizante reforzada","Ajuste velcro en muñeca"],
+        orden: 12
+      }
+    ];
+
+    async function poblar() {
+      try {
+        msg("📂 Subiendo categorías...");
+        for (const c of categorias) {
+          await addDoc(collection(db, "categorias"), c);
+          msg(`&nbsp;&nbsp;✅ ${c.nombre}`, "ok");
+        }
+        msg("🏷️ Subiendo marcas...");
+        for (const m of marcas) {
+          await addDoc(collection(db, "marcas"), m);
+          msg(`&nbsp;&nbsp;✅ ${m.nombre}`, "ok");
+        }
+        msg("📦 Subiendo productos...");
+        for (const p of productos) {
+          await addDoc(collection(db, "productos"), p);
+          msg(`&nbsp;&nbsp;✅ ${p.nombre}`, "ok");
+        }
+        done.style.display = "block";
+      } catch (err) {
+        msg(`❌ Error: ${err.message}`, "error");
+      }
+    }
+
+    poblar();
+  </script>
+</body>
+</html>
