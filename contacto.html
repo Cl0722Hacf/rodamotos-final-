@@ -195,7 +195,7 @@
         </div>
     </footer>
   <script src="js/script.js"></script>
-    >script type="module">
+    <script type="module">
       import { db } from "./firebase-config.js";
       import { collection, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
@@ -221,8 +221,7 @@
         } catch (error) {
           console.error("Error al enviar mensaje:", error);
           alert("Hubo un error al enviar el mensaje. Intenta de nuevo.");
-        }
-      });
-    >/script>
+        });
+        </script>
 </body>
 </html>
