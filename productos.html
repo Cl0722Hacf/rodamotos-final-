@@ -188,21 +188,23 @@
             categoriaActiva = slug;
             document.querySelectorAll(".filtro-btn").forEach(b => b.classList.remove("activo"));
             btn.classList.add("activo");
-            const busq = document.getElementById("buscador").value.toLowerCase();
-            aplicarFiltros(busq);
+            // Limpiar buscador al seleccionar categoría
+            document.getElementById("buscador").value = "";
+            aplicarFiltros("");
         };
 
         // ── BUSCAR POR NOMBRE ──────────────────────────────────────────
         window.buscar = function(texto) {
+            // Al escribir, resetear filtro a Todos para buscar en todos los productos
             if (texto.trim() !== "") {
-                                categoriaActiva = "todos";
-                                document.querySelectorAll(".filtro-btn").forEach(b => b.classList.remove("activo"));
-                                document.querySelector(".filtro-btn[data-cat='todos']").classList.add("activo");
+                categoriaActiva = "todos";
+                document.querySelectorAll(".filtro-btn").forEach(b => b.classList.remove("activo"));
+                document.querySelector(".filtro-btn[data-cat='todos']").classList.add("activo");
             }
             aplicarFiltros(texto.toLowerCase());
         };
 
-function aplicarFiltros(texto) {
+        function aplicarFiltros(texto) {
             let filtrados = todosLosProductos;
             if (categoriaActiva !== "todos")
                 filtrados = filtrados.filter(p => p.categoria === categoriaActiva);
