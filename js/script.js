@@ -270,7 +270,7 @@ function activarDetalleProducto() {
         });
     });
 
-    // Leer producto en detalle.html
+    
     var nombreProducto = document.getElementById("nombreProducto");
     if (!nombreProducto) return;
 
@@ -360,17 +360,6 @@ function activarDetalleProducto() {
 
     escribir();
 })();
-
-/* ==========================================================
-   BASE DE DATOS SIMPLE EN JSON
-   ----------------------------------------------------------
-   GitHub Pages no ejecuta bases de datos como Access, MySQL
-   o SQL Server. Por eso usamos archivos JSON como una base
-   ligera que la página puede leer directamente desde el sitio.
-   Para editar productos o servicios, basta actualizar los
-   archivos data/productos.json y data/servicios.json.
-   ========================================================== */
-
 var productosBD = [];
 
 function normalizarTexto(texto) {
