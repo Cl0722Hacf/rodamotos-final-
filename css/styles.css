@@ -22,7 +22,7 @@ img {
     display: block;
 }
 
-/* ─── NAVBAR ─── */
+
 nav {
     background-color: #111111;
     border-bottom: 3px solid #cc0000;
@@ -94,7 +94,7 @@ nav h2 {
     background-color: #cc0000;
 }
 
-/* ─── HERO / BANNER ─── */
+
 .hero {
     background: linear-gradient(135deg, #111111 0%, #2a0000 50%, #cc0000 100%);
     color: #ffffff;
@@ -145,7 +145,7 @@ nav h2 {
     margin-top: 24px;
 }
 
-/* ─── BOTONES ─── */
+
 .btn-primario {
     display: inline-block;
     background-color: #cc0000;
@@ -221,7 +221,7 @@ nav h2 {
     color: #cc0000;
 }
 
-/* ─── ESTADÍSTICAS ─── */
+
 .estadisticas {
     display: flex;
     justify-content: center;
@@ -255,7 +255,7 @@ nav h2 {
     margin-top: 4px;
 }
 
-/* ─── MAIN / CONTENEDOR ─── */
+
 main {
     width: 90%;
     max-width: 1100px;
@@ -265,7 +265,7 @@ main {
     gap: 28px;
 }
 
-/* ─── TARJETAS DE SECCIÓN ─── */
+
 .tarjeta {
     background-color: #ffffff;
     border-top: 4px solid #cc0000;
@@ -304,7 +304,7 @@ main {
     line-height: 1.7;
 }
 
-/* ─── PRODUCTOS ─── */
+
 .productos {
     display: flex;
     flex-wrap: wrap;
@@ -403,7 +403,7 @@ main {
     transform: translateY(-1px);
 }
 
-/* ─── MARCAS ─── */
+
 .marcas {
     display: flex;
     flex-wrap: wrap;
@@ -428,7 +428,7 @@ main {
     transform: scale(1.05);
 }
 
-/* ─── VENTAJAS ─── */
+
 .ventajas {
     list-style: none;
     display: flex;
@@ -451,7 +451,7 @@ main {
     transform: translateX(4px);
 }
 
-/* ─── VENTAJAS GRID ─── */
+
 .ventajas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -490,7 +490,7 @@ main {
     color: #666;
 }
 
-/* ─── CTA SECTION ─── */
+
 .cta-seccion {
     background: linear-gradient(135deg, #1a0000, #3a0000);
     border-top-color: #ff3333;
@@ -508,7 +508,7 @@ main {
 
 .cta-seccion p { color: rgba(255,255,255,0.85); }
 
-/* ─── FACEBOOK CARD ─── */
+
 .facebook-contenedor { margin-top: 16px; }
 
 .facebook-card {
@@ -544,7 +544,7 @@ main {
     font-weight: 700;
 }
 
-/* ─── BUSCADOR Y FILTROS ─── */
+
 .buscador-contenedor {
     display: flex;
     flex-direction: column;
@@ -592,7 +592,7 @@ main {
 .sin-resultados { text-align: center; padding: 40px; font-size: 18px; color: #888; }
 .oculto { display: none; }
 
-/* ─── SERVICIOS ─── */
+
 .servicios-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -640,7 +640,7 @@ main {
     left: 0;
 }
 
-/* ─── HORARIO ─── */
+
 .horario-tabla {
     border-radius: 10px;
     overflow: hidden;
@@ -669,7 +669,7 @@ main {
 .horario-abierto { color: #22a22a; font-weight: 700; }
 .horario-cerrado { color: #cc0000; font-weight: 700; }
 
-/* ─── CONTACTO ─── */
+
 .contacto-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
@@ -725,7 +725,7 @@ main {
 
 .contacto-card:hover .contacto-accion { background-color: #aa0000; }
 
-/* ─── FORMULARIO ─── */
+
 .formulario-contacto { max-width: 680px; }
 
 .form-grupo {
@@ -786,14 +786,14 @@ main {
     font-size: 15px;
 }
 
-/* ─── MAPA ─── */
+
 .mapa-contenedor {
     border-radius: 12px;
     overflow: hidden;
     border: 2px solid #e0e0e0;
 }
 
-/* ─── DETALLE DE PRODUCTO ─── */
+
 .detalle-producto {
     display: flex;
     gap: 36px;
@@ -856,7 +856,7 @@ main {
     color: #7a6000;
 }
 
-/* ─── FOOTER ─── */
+
 footer {
     background-color: #111111;
     border-top: 3px solid #cc0000;
@@ -901,10 +901,10 @@ footer {
 
 .footer-inferior p { color: #666; font-size: 13px; }
 
-/* ─── TEXTO CENTRADO ─── */
+
 .texto-centrado { text-align: center; }
 
-/* ─── ANIMACIONES DE ENTRADA ─── */
+
 .animar-entrada {
     opacity: 0;
     transform: translateY(28px);
@@ -929,7 +929,7 @@ footer {
     transform: translateY(0);
 }
 
-/* ─── RESPONSIVE ─── */
+
 @media (max-width: 768px) {
     nav { padding: 14px 20px; flex-wrap: wrap; gap: 10px; }
     .menu-toggle { display: block; }
